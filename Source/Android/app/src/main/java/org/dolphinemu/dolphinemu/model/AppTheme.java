@@ -22,13 +22,11 @@ public class AppTheme
 {
   public static final String APP_THEME = "appTheme";
 
-  public static final String MMJR_PURPLE = "mmjrpurple";
   public static final String MMJR_AMOLED = "mmjramoled";
-  public static final String NEON_RED = "neonred";
   public static final String DOLPHIN_BLUE = "dolphinblue";
   public static final String LUIGI_GREEN = "luigigreen";
 
-  public static final String DEFAULT = MMJR_AMOLED;
+  public static final String DEFAULT = APP_THEME;
 
   public static AbstractStringSetting APPLICATION_THEME = new AbstractStringSetting() {
     @Override
@@ -77,21 +75,13 @@ public class AppTheme
     {
       switch (theme)
       {
-        case AppTheme.NEON_RED:
-          themeId = R.style.Theme_DolphinSettings_NeonRed;
-          break;
+
         case AppTheme.DOLPHIN_BLUE:
           themeId = R.style.Theme_DolphinSettings_DolphinBlue;
           break;
-        case AppTheme.LUIGI_GREEN:
-          themeId = R.style.Theme_DolphinSettings_LuigiGreen;
-          break;
-        case AppTheme.MMJR_PURPLE:
-          themeId = R.style.Theme_DolphinSettings_MmjrPurple;
-          break;
-        case AppTheme.MMJR_AMOLED:
+
         default:
-          themeId = R.style.Theme_DolphinSettings_MmjrAmoled;
+          themeId = R.style.Dolphin_Material_SettingsBase;
           break;
       }
     }
@@ -99,21 +89,13 @@ public class AppTheme
     {
       switch (theme)
       {
-        case AppTheme.NEON_RED:
-          themeId = R.style.Theme_DolphinEmulation_NeonRed;
-          break;
+
         case AppTheme.DOLPHIN_BLUE:
-          themeId = R.style.Theme_DolphinEmulation_DolphinBlue;
+          themeId = R.style.DolphinBase;
           break;
-        case AppTheme.LUIGI_GREEN:
-          themeId = R.style.Theme_DolphinEmulation_LuigiGreen;
-          break;
-        case AppTheme.MMJR_PURPLE:
-          themeId = R.style.Theme_DolphinSettings_MmjrPurple;
-          break;
-        case AppTheme.MMJR_AMOLED:
+
         default:
-          themeId = R.style.Theme_DolphinSettings_MmjrAmoled;
+          themeId = R.style.DolphinBase;
           break;
       }
     }
@@ -121,21 +103,12 @@ public class AppTheme
     {
       switch (theme)
       {
-        case AppTheme.NEON_RED:
-          themeId = R.style.Theme_DolphinTv_NeonRed;
-          break;
         case AppTheme.DOLPHIN_BLUE:
           themeId = R.style.Theme_DolphinTv_DolphinBlue;
           break;
-        case AppTheme.LUIGI_GREEN:
-          themeId = R.style.Theme_DolphinTv_LuigiGreen;
-          break;
-        case AppTheme.MMJR_PURPLE:
-          themeId = R.style.Theme_DolphinTv_MmjrPurple;
-          break;
-        case AppTheme.MMJR_AMOLED:
+
         default:
-          themeId = R.style.Theme_DolphinTv_MmjrAmoled;
+          themeId = R.style.DolphinBase;
           break;
       }
     }
@@ -143,21 +116,12 @@ public class AppTheme
     {
       switch (theme)
       {
-        case AppTheme.NEON_RED:
-          themeId = R.style.Theme_DolphinMain_NeonRed;
-          break;
+
         case AppTheme.DOLPHIN_BLUE:
           themeId = R.style.Theme_DolphinMain_DolphinBlue;
           break;
-        case AppTheme.LUIGI_GREEN:
-          themeId = R.style.Theme_DolphinMain_LuigiGreen;
-          break;
-        case AppTheme.MMJR_PURPLE:
-          themeId = R.style.Theme_DolphinMain_MmjrPurple;
-          break;
-        case AppTheme.MMJR_AMOLED:
         default:
-          themeId = R.style.Theme_DolphinMain_MmjrAmoled;
+          themeId = R.style.DolphinBase;
           break;
       }
     }

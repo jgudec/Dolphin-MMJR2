@@ -16,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 import org.dolphinemu.dolphinemu.DolphinApplication;
 import org.dolphinemu.dolphinemu.R;
 import org.dolphinemu.dolphinemu.activities.ConvertActivity;
@@ -80,7 +82,7 @@ public class GamePropertiesDialog extends DialogFragment
             platform == Platform.WII.toInt();
     final boolean isWii = platform != Platform.GAMECUBE.toInt();
 
-    AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
+    AlertDialog.Builder builder = new MaterialAlertDialogBuilder(requireActivity());
     ViewGroup contents = (ViewGroup) getActivity().getLayoutInflater()
             .inflate(R.layout.dialog_game_properties, null);
 
@@ -233,7 +235,7 @@ public class GamePropertiesDialog extends DialogFragment
   {
 	File externalPath = Environment.getExternalStorageDirectory();
     int count = 0;
-	String cachePath = externalPath.getAbsolutePath() + "/mmjr-revamp/cache";	
+	String cachePath = externalPath.getAbsolutePath() + "/mmjr-revamp/cache";
     File dir = new File(cachePath);
     if (dir.exists())
     {

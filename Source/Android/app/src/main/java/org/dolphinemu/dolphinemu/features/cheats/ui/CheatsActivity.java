@@ -4,6 +4,7 @@ package org.dolphinemu.dolphinemu.features.cheats.ui;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -96,6 +97,8 @@ public class CheatsActivity extends AppCompatActivity
 
     // show up button
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    getSupportActionBar().setElevation(0);
+    getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.dolphin_background)));
   }
 
   @Override

@@ -2,6 +2,7 @@
 
 package org.dolphinemu.dolphinemu.features.settings.ui;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -10,13 +11,17 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
+
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 import org.dolphinemu.dolphinemu.NativeLibrary;
 import org.dolphinemu.dolphinemu.R;
@@ -77,8 +82,19 @@ public final class SettingsActivity extends AppCompatActivity implements Setting
     mPresenter = new SettingsActivityPresenter(this, getSettings());
     mPresenter.onCreate(savedInstanceState, menuTag, gameID, revision, isWii, this);
 
-    // show up button
-    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
+
+    toolbar.setOnMenuItemClickListener(this::onOptionsItemSelected);
+
+    ExtendedFloatingActionButton fab1 = (ExtendedFloatingActionButton) findViewById(R.id.fab_save);
+
+    fab1.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        mPresenter.saveSettings();
+
+      }
+    });
   }
 
   @Override
@@ -137,10 +153,10 @@ public final class SettingsActivity extends AppCompatActivity implements Setting
       if (areSystemAnimationsEnabled())
       {
         transaction.setCustomAnimations(
-                R.animator.settings_enter,
-                R.animator.settings_exit,
-                R.animator.settings_pop_enter,
-                R.animator.setttings_pop_exit);
+            R.anim.abc_grow_fade_in_from_bottom,
+            R.anim.abc_fade_out,
+            R.anim.abc_fade_in,
+            R.anim.abc_shrink_fade_out_from_bottom);
       }
 
       transaction.addToBackStack(null);
@@ -162,6 +178,7 @@ public final class SettingsActivity extends AppCompatActivity implements Setting
     return duration != 0 && transition != 0;
   }
 
+  @SuppressLint("WrongConstant")
   @Override
   protected void onActivityResult(int requestCode, int resultCode, Intent result)
   {

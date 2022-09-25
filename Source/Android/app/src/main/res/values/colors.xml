@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="dolphin_blue">#2196f3</color>
+    <color name="dolphin_blue">@color/material_dynamic_primary60</color>
     <color name="dolphin_blue_dark">#1976d2</color>
-    <color name="dolphin_purple">#651fff</color>
+    <color name="dolphin_purple">@color/material_dynamic_primary20</color>
     <color name="dolphin_blue_text_accent">@color/dolphin_purple</color>
 
-    <color name="purple_primary">#711fff</color>
-    <color name="purple_primary_dark">#4c1bbf</color>
-    <color name="purple_accent">#711fff</color>
-    <color name="purple_onprimary">#e91c63</color>
-    <color name="purple_text_accent">@color/purple_onprimary</color>
-	
+    <color name="purple_primary">@color/material_dynamic_primary60</color>
+    <color name="purple_primary_dark">@color/material_dynamic_primary60</color>
+    <color name="purple_accent">@color/material_dynamic_primary60</color>
+    <color name="purple_onprimary">@color/material_dynamic_primary60</color>
+    <color name="purple_text_accent">@color/material_dynamic_primary60</color>
+
     <color name="amoled_primary">#808080</color>
     <color name="amoled_primary_dark">#000000</color>
     <color name="amoled_accent">#808080</color>
@@ -62,12 +62,12 @@
     <color name="green_gradient_secondary_start">@color/luigi_green_primary_dark</color>
     <color name="green_gradient_secondary_end">@color/green_gradient_secondary_start</color>
 
-    <color name="dolphin_background">#fafafa</color>
-    <color name="divider">#1f000000</color>
-    <color name="divider_dark">#66ffffff</color>
-    <color name="text">#3a3a3a</color>
-    <color name="text_dark">#dcdcdc</color>
-    <color name="dialog_background">#fafafa</color>
+    <color name="dolphin_background">@color/material_dynamic_neutral95</color>
+    <color name="divider">@color/material_dynamic_neutral95</color>
+    <color name="divider_dark">@color/material_dynamic_neutral10</color>
+    <color name="text">@color/material_dynamic_neutral10</color>
+    <color name="text_dark">@color/material_dynamic_neutral10</color>
+    <color name="dialog_background">@color/material_dynamic_neutral95</color>
     <color name="ripple_white">#d3d3d3</color>
 
     <color name="dolphin_accent_wii">#9e9e9e</color>
@@ -79,10 +79,22 @@
     <color name="circle_grey">#bdbdbd</color>
     <color name="light_grey">#e6e6e6</color>
     <!-- 12% black in LIGHT THEME -->
-    <color name="nnf_light_separator_color">#1e000000</color>
+    <color name="nnf_light_separator_color">@color/dolphin_background</color>
     <!-- 12% white in BLACK THEME -->
-    <color name="nnf_dark_separator_color">#1effffff</color>
+    <color name="nnf_dark_separator_color">@color/dolphin_background</color>
 
     <color name="invalid_setting_overlay">#36ff0000</color>
+
+    <color name="m3_primary_color">@color/material_dynamic_primary60</color>
+    <color name="m3_primary_text_color">@color/material_dynamic_neutral10</color>
+    <color name="m3_secondary_text_color">@color/material_dynamic_neutral20</color>
+    <color name="m3_secondary_color">@color/material_dynamic_secondary60</color>
+    <color name="m3_button">@color/material_dynamic_primary90</color>
+    <color name="m3_button_icon">@color/material_dynamic_neutral10</color>
+    <color name="m3_tab_icon_color">@color/material_dynamic_primary40</color>
+    <color name="m3_container_bg">@color/material_dynamic_neutral99</color>
+    <color name="icon_background">@color/m3_primary_color</color>
+    <color name="m3_fab_text_color">@color/material_dynamic_neutral90</color>
+    <color name="m3_button_text_color">@color/material_dynamic_primary99</color>
 
 </resources>
