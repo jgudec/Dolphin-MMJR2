@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 
-def keystorePropertiesFile = rootProject.file("keystore.properties");
+def keystorePropertiesFile = rootProject.file("android/keystore.properties");
 def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
@@ -28,7 +28,7 @@ android {
 
     defaultConfig {
         applicationId "org.dolphinemu.mmjr"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 29
 
         versionCode(getBuildVersionCode())
@@ -128,8 +128,8 @@ def getVersion() {
 
     try {
         versionNumber = 'git describe --always --tags --abbrev=0'.execute([], project.rootDir).text
-                .trim()
-                .replaceAll(/(-0)?-[^-]+$/, "")
+            .trim()
+            .replaceAll(/(-0)?-[^-]+$/, "")
     } catch (Exception e) {
         logger.error(e + ': Cannot find git, defaulting to dummy version number')
     }
@@ -141,11 +141,11 @@ def getVersion() {
 def getBuildVersionCode() {
     try {
         def versionNumber = 'git rev-list --first-parent --count HEAD'.execute([], project.rootDir).text
-                .trim()
+            .trim()
         return Integer.valueOf(versionNumber)
     } catch (Exception e) {
         logger.error(e + ': Cannot find git, defaulting to dummy version number')
     }
 
     return 1
-}
+}

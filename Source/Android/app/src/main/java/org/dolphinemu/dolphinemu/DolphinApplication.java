@@ -6,6 +6,8 @@ import android.app.Application;
 import android.content.Context;
 import android.hardware.usb.UsbManager;
 
+import com.google.android.material.color.DynamicColors;
+
 import org.dolphinemu.dolphinemu.model.AppTheme;
 import org.dolphinemu.dolphinemu.utils.DirectoryInitialization;
 import org.dolphinemu.dolphinemu.utils.Java_GCAdapter;
@@ -31,7 +33,7 @@ public class DolphinApplication extends Application
       DirectoryInitialization.start(getApplicationContext());
 
     // Set theme of native components
-    NativeLibrary.setNativeTheme(AppTheme.APPLICATION_THEME.getString(null));
+    DynamicColors.applyToActivitiesIfAvailable(this);
   }
 
   public static Context getAppContext()

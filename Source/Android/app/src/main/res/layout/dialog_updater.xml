@@ -6,12 +6,13 @@
     android:layout_height="wrap_content"
     android:background="@color/dolphin_background"
     android:transitionName="card_game"
-    android:animateLayoutChanges="true">
+    android:animateLayoutChanges="true"
+    style="@style/Theme.Material3.DayNight.Dialog.Alert">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/amoled_primary_dark"
+
         android:paddingStart="24dp"
         android:paddingTop="24dp"
         android:paddingEnd="24dp"
@@ -33,7 +34,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:indeterminate="true"
-            android:theme="@style/DolphinBase"
             app:layout_constraintBottom_toBottomOf="@id/updater_body"
             app:layout_constraintEnd_toEndOf="@id/updater_body"
             app:layout_constraintStart_toStartOf="@id/updater_body"
@@ -47,7 +47,6 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:textColor="@color/text"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/title"
             tools:text="@string/current_version" />
@@ -61,7 +60,6 @@
             android:layout_marginTop="6dp"
             android:gravity="center"
             android:text="@string/updater_title"
-            android:textColor="?attr/colorAccent"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/banner" />
 
@@ -110,7 +108,6 @@
                 android:layout_width="30dp"
                 android:layout_height="match_parent"
                 android:indeterminate="true"
-                android:theme="@style/DolphinBase"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="@id/button_view_changelog"
                 app:layout_constraintEnd_toEndOf="@id/changelog_error"
@@ -135,7 +132,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
                 android:gravity="start"
-                android:textColor="@color/text"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/text_download_size"
                 app:layout_constraintStart_toStartOf="parent"
@@ -148,7 +144,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="start"
-                android:textColor="@color/text"
                 app:layout_constraintBottom_toTopOf="@+id/divider_2"
                 app:layout_constraintStart_toStartOf="@id/text_version"
                 app:layout_constraintTop_toBottomOf="@+id/text_version"
@@ -159,7 +154,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
                 android:text="@string/button_view_changelog"
-                android:textColor="@color/text"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/button_view_changelog"
                 app:layout_constraintStart_toEndOf="@id/changelog_arrow"
@@ -209,22 +203,20 @@
 
                 <Button
                     android:id="@+id/button_download"
-                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/button_primary_gradient"
                     android:stateListAnimator="@null"
                     android:text="@string/button_download"
-                    android:textColor="?attr/colorOnGradientPrimary"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textColor="@color/m3_primary_color"/>
 
                 <ProgressBar
                     android:id="@+id/progressbar_download"
-                    style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:max="100"
                     android:progress="0"
+
                     android:progressDrawable="@drawable/progressbar_primary_gradient"
                     app:layout_constraintStart_toStartOf="parent" />
 
@@ -246,7 +238,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="4dp"
                 android:layout_marginTop="3dp"
-                android:textColor="@color/text"
                 tools:text="Changelog body, interesting suff here." />
 
         </androidx.core.widget.NestedScrollView>

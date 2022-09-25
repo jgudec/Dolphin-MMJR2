@@ -21,12 +21,12 @@ constexpr char NEON_RED[] = "neonred";
 constexpr char DOLPHIN_BLUE[] = "dolphinblue";
 constexpr char LUIGI_GREEN[] = "luigigreen";
 
-constexpr u32 PURPLE = 0xFFFF00FF;
+constexpr u32 PURPLE = 0xFF00FFFF;
 constexpr u32 RED = 0xFFFF0000;
 constexpr u32 BLUE = 0xFF00FFFF;
 constexpr u32 GREEN = 0xFF00FF00;
 
-constexpr float F_PURPLE[3] = {RED_MASK(PURPLE) / 255.0f, GREEN_MASK(PURPLE) / 255.0f, BLUE_MASK(PURPLE) / 255.0f};
+constexpr float F_PURPLE[3] = {RED_MASK(BLUE) / 255.0f, GREEN_MASK(BLUE) / 255.0f, BLUE_MASK(BLUE) / 255.0f};
 constexpr float F_RED[3] = {RED_MASK(RED) / 255.0f, GREEN_MASK(RED) / 255.0f, BLUE_MASK(RED) / 255.0f};
 constexpr float F_BLUE[3] = {RED_MASK(BLUE) / 255.0f, GREEN_MASK(BLUE) / 255.0f, BLUE_MASK(BLUE) / 255.0f};
 constexpr float F_GREEN[3] = {RED_MASK(GREEN) / 255.0f, GREEN_MASK(GREEN) / 255.0f, BLUE_MASK(GREEN) / 255.0f};

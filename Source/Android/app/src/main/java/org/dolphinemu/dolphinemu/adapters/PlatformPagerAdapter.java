@@ -9,6 +9,8 @@ import android.text.SpannableString;
 import android.text.style.ImageSpan;
 
 import androidx.annotation.NonNull;
+import androidx.core.graphics.BlendModeColorFilterCompat;
+import androidx.core.graphics.BlendModeCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -60,6 +62,7 @@ public class PlatformPagerAdapter extends FragmentPagerAdapter
     // TODO: This workaround will eventually not be necessary; switch to more legit methods when that is the case
     // TODO: Also remove additional hax from styles.xml
     Drawable drawable = mContext.getResources().getDrawable(TAB_ICONS[position]);
+    drawable.setColorFilter(BlendModeColorFilterCompat.createBlendModeColorFilterCompat(R.color.m3_tab_icon_color, BlendModeCompat.SRC_ATOP));
     drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
 
     ImageSpan imageSpan = new ImageSpan(drawable, ImageSpan.ALIGN_BOTTOM);

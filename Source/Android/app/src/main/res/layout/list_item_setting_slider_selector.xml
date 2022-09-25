@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:background="?android:attr/selectableItemBackground"
     android:focusable="true"
-    android:clickable="true">
+    android:clickable="true"
+    android:layout_marginRight="20dp">
 
     <TextView
         android:id="@+id/text_setting_name"
@@ -36,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="22dp"
         android:layout_marginTop="@dimen/spacing_medsmall"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        style="@style/Widget.Material3.Slider"
         tools:max="10"
         tools:progress="3"
         android:layout_marginEnd="@dimen/spacing_medium"
@@ -51,7 +52,7 @@
         android:layout_height="0dp"
         tools:text="2.50"
         android:textSize="16sp"
-        android:textColor="?attr/textColor"
+        android:textColor="?attr/colorControlNormal"
         android:layout_toStartOf="@id/text_units"
         android:layout_alignTop="@id/seekbar"
         android:layout_alignBottom="@id/seekbar" />
@@ -62,7 +63,7 @@
         android:layout_height="wrap_content"
         tools:text="x"
         android:textSize="16sp"
-        android:textColor="?attr/textColor"
+        android:textColor="?attr/colorControlNormal"
         android:layout_alignTop="@+id/text_value"
         android:layout_alignEnd="@id/text_setting_name" />
 

@@ -4,35 +4,40 @@
     android:id="@+id/coordinator_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dolphin_background">
+    android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        android:fitsSystemWindows="true"
+>
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_main"
-            android:background="?attr/colorPrimaryDark"
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            style="?attr/catalogToolbarStyle"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/Theme.MaterialComponents.DayNight" />
+            android:layout_height="264dp"
+            app:titleCollapseMode="scale"
+            app:collapsedTitleTextAppearance="?attr/textAppearanceHeadline5"
+            app:expandedTitleGravity="bottom"
+            app:expandedTitleMarginBottom="120dp"
+            app:expandedTitleMarginStart="16dp"
+            app:expandedTitleTextAppearance="?attr/textAppearanceHeadline4"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            >
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs_platforms"
-            style="@style/Widget.Design.TabLayout"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="1dp"
-            android:paddingRight="1dp"
-            app:tabBackground="?attr/colorPrimaryDark"
-            app:tabGravity="fill"
-            app:tabIndicatorColor="?attr/colorOnPrimary"
-			app:tabIndicatorHeight="3dp"
-            app:tabMode="fixed"
-            app:tabTextAppearance="@style/MyCustomTextAppearance" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_main"
+                style="?attr/catalogToolbarWithCloseButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:title="Dolphin"
+                android:background="@android:color/transparent"
+                android:paddingLeft="6dp"
+                />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -44,17 +49,31 @@
         android:paddingRight="1dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/button_add_directory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-		android:minHeight="48dp"
-        android:backgroundTint="?attr/colorAccent"
-        android:src="@drawable/ic_add"
-        app:borderWidth="0dp"
-        app:layout_anchor="@+id/pager_platforms"
-        app:layout_anchorGravity="bottom|right|end"
-        app:tint="@android:color/white" />
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="120dp"
+        android:contentDescription="Save current settings"
+        android:text="Add a game"
+        android:foregroundTint="@color/m3_primary_text_color"
+        app:icon="@drawable/ic_add"
+        app:layout_anchor="@id/bottomNavBar"
+        app:layout_anchorGravity="top|right|end"
+        app:elevation="6dp"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        app:menu="@menu/menu_platforms"
+        android:layout_gravity="bottom"
+        android:fitsSystemWindows="true"
+        android:paddingBottom="18dp"
+        app:elevation="2dp"
+        app:labelVisibilityMode="unlabeled"
+        />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

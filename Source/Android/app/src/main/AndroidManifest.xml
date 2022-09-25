@@ -34,8 +34,7 @@
     <application
         android:name=".DolphinApplication"
         android:label="@string/app_name"
-        android:icon="@mipmap/ic_launcher"
-        android:theme="@style/DolphinBase"
+        android:icon="@mipmap/ic_launcher_round"
         android:requestLegacyExternalStorage="true"
         android:allowBackup="false"
         android:supportsRtl="true"
@@ -48,7 +47,7 @@
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="true"
-            android:theme="@style/DolphinBase">
+            >
 
             <!-- This intentfilter marks this Activity as the one that gets launched from Home screen. -->
             <intent-filter>
@@ -61,7 +60,7 @@
         <activity
             android:name=".ui.main.TvMainActivity"
             android:exported="true"
-            android:theme="@style/DolphinTvBase">
+            android:theme="@style/Theme.Material3.DynamicColors.DayNight">
 
             <!-- This intentfilter marks this Activity as the one that gets launched from Home screen. -->
             <intent-filter>
@@ -75,7 +74,7 @@
             android:name=".features.settings.ui.SettingsActivity"
             android:exported="false"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/DolphinSettingsBase"
+            android:theme="@style/Dolphin.Material.SettingsBase"
             android:label="@string/settings"/>
 
         <activity
@@ -148,4 +147,4 @@
 
     </application>
 
-</manifest>
+</manifest>

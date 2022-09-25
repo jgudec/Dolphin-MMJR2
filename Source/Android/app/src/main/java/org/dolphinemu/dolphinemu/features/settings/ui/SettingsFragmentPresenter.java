@@ -259,12 +259,10 @@ public final class SettingsFragmentPresenter
         sl.add(new SubmenuSetting(mContext, R.string.wiimote_settings, MenuTag.WIIMOTE));
     }
 
-    sl.add(new HeaderSetting(mContext, R.string.setting_clear_info, 0));
   }
 
   private void addConfigSettings(ArrayList<SettingsItem> sl)
   {
-    sl.add(new HeaderSetting(mContext, R.string.setting_clear_info, 0));
     sl.add(new SubmenuSetting(mContext, R.string.general_submenu, MenuTag.CONFIG_GENERAL));
     sl.add(new SubmenuSetting(mContext, R.string.graphics_general, MenuTag.GRAPHICS));
     sl.add(new SubmenuSetting(mContext, R.string.interface_submenu, MenuTag.CONFIG_INTERFACE));
@@ -300,8 +298,6 @@ public final class SettingsFragmentPresenter
 
   private void addInterfaceSettings(ArrayList<SettingsItem> sl)
   {
-    sl.add(new StringSingleChoiceSetting(mContext, AppTheme.APPLICATION_THEME, R.string.application_theme,
-            0, R.array.themeEntries, R.array.themeValues));
     // Listener that reloads the application when the theme is changed
     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
     prefs.registerOnSharedPreferenceChangeListener(AppTheme.onThemeSettingChanged);
