@@ -140,3 +140,10 @@ in the ISO list and selecting "ISO Properties".
 
 Riivolution Patches have to be placed in the user directory under
 `Load/Riivolution/`. Once you have extracted the patches here, long press on the game & select `Start with Riivolution Patches`
+
+
+## Android Screenshots
+
+
+
+<img src="https://user-images.githubusercontent.com/37148761/192362571-825bafe8-4d3d-4def-b36f-52c1f1b3e3e1.jpg" width="240" height="520"> <img src="https://user-images.githubusercontent.com/37148761/192362578-29662340-95b0-4f97-8440-9b4559a27a0f.jpg" width="240" height="520"> <img src="https://user-images.githubusercontent.com/37148761/192362580-28a8536b-ffd3-4cb7-acac-7781d4a6da6e.jpg" width="240" height="520"> <img src="https://user-images.githubusercontent.com/37148761/192362583-ee6b677e-d567-4411-bbf0-aa64b2b2067e.jpg" width="240" height="520"> <img src="https://user-images.githubusercontent.com/37148761/192362587-59f05d17-6e9b-490c-96a7-2a6abf012989.jpg" width="240" height="520"> <img src="https://user-images.githubusercontent.com/37148761/192362591-1a4a50df-1a4b-4393-9fe6-8683494fd2fc.jpg" width="240" height="520"> <img src="https://user-images.githubusercontent.com/37148761/192362592-7550ad2d-f7e9-449f-a240-632f571b0169.jpg" width="240" height="520"> <img src="https://user-images.githubusercontent.com/37148761/192362595-5df0d734-7678-4ff5-9d6b-4d53f6a5966e.jpg" width="240" height="520"> <img src="https://user-images.githubusercontent.com/37148761/192362596-c5a03208-c5c1-49ff-98eb-4cff60db4303.jpg" width="520" height="240">
