@@ -83,7 +83,7 @@ public final class MainActivity extends AppCompatActivity
     if (PermissionsHandler.hasWriteAccess(this))
     {
       new AfterDirectoryInitializationRunner()
-              .runWithLifecycle(this, false, this::setPlatformTabsAndStartGameFileCacheService);
+              .runWithLifecycle(this, this::setPlatformTabsAndStartGameFileCacheService);
     }
   }
 
@@ -96,7 +96,7 @@ public final class MainActivity extends AppCompatActivity
     {
       DirectoryInitialization.start(this);
       new AfterDirectoryInitializationRunner()
-              .runWithLifecycle(this, false, this::setPlatformTabsAndStartGameFileCacheService);
+              .runWithLifecycle(this, this::setPlatformTabsAndStartGameFileCacheService);
     }
 
     mPresenter.onResume();
@@ -275,7 +275,7 @@ public final class MainActivity extends AppCompatActivity
       {
         DirectoryInitialization.start(this);
         new AfterDirectoryInitializationRunner()
-                .runWithLifecycle(this, false, this::setPlatformTabsAndStartGameFileCacheService);
+                .runWithLifecycle(this, this::setPlatformTabsAndStartGameFileCacheService);
       }
       else
       {
@@ -303,7 +303,7 @@ public final class MainActivity extends AppCompatActivity
   public void onRefresh()
   {
     setRefreshing(true);
-    GameFileCacheManager.startRescan(this);
+    GameFileCacheManager.startRescan();
   }
 
   /**
@@ -401,7 +401,7 @@ public final class MainActivity extends AppCompatActivity
     mViewPager.setCurrentItem(IntSetting.MAIN_LAST_PLATFORM_TAB.getIntGlobal());
 
     showGames();
-    GameFileCacheManager.startLoad(this);
+    GameFileCacheManager.startLoad();
   }
 
   @Override
