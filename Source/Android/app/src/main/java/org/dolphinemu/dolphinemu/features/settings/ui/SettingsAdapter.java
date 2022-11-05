@@ -17,6 +17,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 import org.dolphinemu.dolphinemu.R;
 import org.dolphinemu.dolphinemu.dialogs.MotionAlertDialog;
 import org.dolphinemu.dolphinemu.features.settings.model.Settings;
@@ -214,7 +216,7 @@ public final class SettingsAdapter extends RecyclerView.Adapter<SettingViewHolde
   {
     LayoutInflater inflater = LayoutInflater.from(mContext);
 
-    AlertDialog.Builder builder = new AlertDialog.Builder(mContext, R.style.DolphinDialogBase);
+    MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(mContext, R.style.DolphinDialogBase);
     View dialogView = inflater.inflate(R.layout.dialog_input_string, null);
     EditText input = (EditText) dialogView.findViewById(R.id.input);
     input.setText(item.getSelectedValue(getSettings()));
@@ -245,7 +247,7 @@ public final class SettingsAdapter extends RecyclerView.Adapter<SettingViewHolde
 
     int value = getSelectionForSingleChoiceValue(item);
 
-    AlertDialog.Builder builder = new AlertDialog.Builder(mView.getActivity());
+    MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(mView.getActivity());
 
     builder.setTitle(item.getName());
     builder.setSingleChoiceItems(item.getChoicesId(), value, this);
@@ -258,7 +260,7 @@ public final class SettingsAdapter extends RecyclerView.Adapter<SettingViewHolde
     mClickedItem = item;
     mClickedPosition = position;
 
-    AlertDialog.Builder builder = new AlertDialog.Builder(mView.getActivity());
+    MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(mView.getActivity());
 
     builder.setTitle(item.getName());
     builder.setSingleChoiceItems(item.getChoices(), item.getSelectedValueIndex(getSettings()),
@@ -275,7 +277,7 @@ public final class SettingsAdapter extends RecyclerView.Adapter<SettingViewHolde
 
     int value = getSelectionForSingleChoiceDynamicDescriptionsValue(item);
 
-    AlertDialog.Builder builder = new AlertDialog.Builder(mView.getActivity());
+    MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(mView.getActivity());
 
     builder.setTitle(item.getName());
     builder.setSingleChoiceItems(item.getChoicesId(), value, this);
@@ -289,7 +291,7 @@ public final class SettingsAdapter extends RecyclerView.Adapter<SettingViewHolde
     mClickedPosition = position;
     mSeekbarMinValue = item.getMin();
     mSeekbarProgress = item.getSelectedValue(getSettings());
-    AlertDialog.Builder builder = new AlertDialog.Builder(mView.getActivity());
+    MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(mView.getActivity());
 
     LayoutInflater inflater = LayoutInflater.from(mView.getActivity());
     View view = inflater.inflate(R.layout.dialog_seekbar, null);

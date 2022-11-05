@@ -28,6 +28,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.DialogFragment;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 import org.dolphinemu.dolphinemu.R;
 import org.dolphinemu.dolphinemu.model.UpdaterData;
 import org.dolphinemu.dolphinemu.utils.DownloadCallback;
@@ -74,7 +76,9 @@ public final class UpdaterDialog extends DialogFragment implements LoadCallback<
   @Override
   public Dialog onCreateDialog(Bundle savedInstanceState)
   {
-    AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
+
+     MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(getContext())
+        .setView(R.layout.dialog_updater);
     ViewGroup viewGroup = (ViewGroup) getActivity().getLayoutInflater()
       .inflate(R.layout.dialog_updater, null);
 

@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentManager;
 import com.android.volley.Request;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import org.dolphinemu.dolphinemu.BuildConfig;
 import org.dolphinemu.dolphinemu.R;
@@ -74,7 +75,7 @@ public class UpdaterUtils
 
   private static void showUpdateMessage(Context context, UpdaterData data)
   {
-    new AlertDialog.Builder(context)
+    MaterialAlertDialogBuilder dialogBuilder = new MaterialAlertDialogBuilder(context)
       .setTitle(context.getString(R.string.updates_alert))
       .setMessage(context.getString(R.string.updater_alert_body))
       .setPositiveButton(R.string.yes, (dialogInterface, i) ->
@@ -82,21 +83,27 @@ public class UpdaterUtils
       .setNegativeButton(R.string.skip_version, (dialogInterface, i) ->
         setSkipVersion(data.version.toString()))
       .setNeutralButton(R.string.not_now,
-        ((dialogInterface, i) -> dialogInterface.dismiss()))
-      .show();
+      ((dialogInterface, i) -> dialogInterface.dismiss()));
+
+    AlertDialog dialog = dialogBuilder.create();
+
+      dialog.show();
   }
 
   private static void showPermissionDialog(Context context)
   {
-    new AlertDialog.Builder(context)
+    MaterialAlertDialogBuilder dialogBuilder = new MaterialAlertDialogBuilder(context)
       .setTitle(context.getString(R.string.updater_check_startup))
       .setMessage(context.getString(R.string.updater_check_startup_description))
       .setPositiveButton(R.string.yes, (dialogInterface, i) ->
         setPrefs(true))
       .setNegativeButton(R.string.no, (dialogInterface, i) ->
         setPrefs(false))
-      .setOnDismissListener(dialog -> checkUpdatesInit(context))
-      .show();
+      .setOnDismissListener(dialog -> checkUpdatesInit(context));
+
+    AlertDialog dialog = dialogBuilder.create();
+
+    dialog.show();
   }
 
   private static void setPrefs(boolean enabled)
