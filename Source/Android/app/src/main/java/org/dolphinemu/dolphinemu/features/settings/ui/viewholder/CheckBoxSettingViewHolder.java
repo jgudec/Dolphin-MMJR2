@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
+import com.google.android.material.materialswitch.MaterialSwitch;
+
 import org.dolphinemu.dolphinemu.R;
 import org.dolphinemu.dolphinemu.features.settings.model.view.CheckBoxSetting;
 import org.dolphinemu.dolphinemu.features.settings.model.view.SettingsItem;
@@ -21,7 +23,7 @@ public final class CheckBoxSettingViewHolder extends SettingViewHolder
   private TextView mTextSettingName;
   private TextView mTextSettingDescription;
 
-  private CheckBox mCheckbox;
+  private MaterialSwitch mCheckbox;
 
   public CheckBoxSettingViewHolder(View itemView, SettingsAdapter adapter)
   {

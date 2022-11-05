@@ -13,8 +13,9 @@
         tools:text="CPU Settings"
         android:layout_marginStart="@dimen/spacing_large"
         android:layout_marginBottom="@dimen/spacing_small"
-        android:textColor="?attr/colorAccent"
-        android:textStyle="bold"
+        android:layout_marginEnd="@dimen/spacing_large"
+        android:textColor="@color/material_dynamic_primary40"
+        android:textAppearance="?attr/textAppearanceLabelLarge"
         android:layout_gravity="start|bottom"/>
 
 </FrameLayout>

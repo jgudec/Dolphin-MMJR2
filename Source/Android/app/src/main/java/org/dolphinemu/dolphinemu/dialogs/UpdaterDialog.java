@@ -135,8 +135,8 @@ public final class UpdaterDialog extends DialogFragment implements LoadCallback<
     {
       updaterMessage.setText(R.string.updater_uptodate);
       updaterMessage.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
-      downloadButton.setText(null);
       downloadButton.setEnabled(false);
+      downloadProgressBar.setVisibility(View.GONE);
     }
     else
     {

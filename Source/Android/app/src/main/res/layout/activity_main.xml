@@ -19,11 +19,11 @@
             android:layout_width="match_parent"
             android:layout_height="264dp"
             app:titleCollapseMode="scale"
-            app:collapsedTitleTextAppearance="?attr/textAppearanceHeadline5"
+            app:collapsedTitleTextAppearance="?attr/textAppearanceTitleLarge"
             app:expandedTitleGravity="bottom"
             app:expandedTitleMarginBottom="120dp"
             app:expandedTitleMarginStart="16dp"
-            app:expandedTitleTextAppearance="?attr/textAppearanceHeadline4"
+            app:expandedTitleTextAppearance="?attr/textAppearanceDisplaySmall"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
             >
 

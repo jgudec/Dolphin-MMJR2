@@ -23,12 +23,12 @@ public final class StartupHandler
 
   public static void HandleInit(FragmentActivity parent)
   {
-    if (!NativeLibrary.CheckIntegrity(parent.getPackageName(),
-              parent.getResources().getString(R.string.app_name)))
-    {
-      Object obj = null;
-      obj.toString();
-    }
+//    if (!NativeLibrary.CheckIntegrity(parent.getPackageName(),
+//              parent.getResources().getString(R.string.app_name)))
+//    {
+//      Object obj = null;
+//      obj.toString();
+//    }
 
     // Ask the user to grant write permission if it's not already granted
     PermissionsHandler.checkWritePermission(parent);

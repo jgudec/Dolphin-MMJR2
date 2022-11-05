@@ -27,8 +27,9 @@ android {
     }
 
     defaultConfig {
-        applicationId "org.dolphinemu.mmjr"
+        applicationId "org.dolphinemu.mmjr.md3"
         minSdkVersion 23
+        //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 29
 
         versionCode(getBuildVersionCode())

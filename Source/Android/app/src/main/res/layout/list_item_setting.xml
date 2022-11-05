@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/TextAppearance.MaterialComponents.Headline5"
+        style="@style/TextAppearance.Material3.TitleLarge"
         tools:text="Setting Name"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
@@ -21,8 +21,8 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"
         android:id="@+id/text_setting_name"
-        android:textSize="16sp"
-        android:textColor="?attr/colorControlNormal"/>
+        android:textSize="20dp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,10 +33,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
         android:id="@+id/text_setting_description"
         android:layout_below="@+id/text_setting_name"
         android:layout_alignStart="@+id/text_setting_name"
+        android:textAppearance="?attr/textAppearanceListItemSecondary"
         android:textColor="?attr/colorControlNormal"/>
 
 </RelativeLayout>
