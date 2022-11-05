@@ -298,6 +298,7 @@ public final class SettingsFragmentPresenter
 
   private void addInterfaceSettings(ArrayList<SettingsItem> sl)
   {
+    sl.add(new HeaderSetting(mContext, R.string.interface_submenu, 0));
     // Listener that reloads the application when the theme is changed
     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
     prefs.registerOnSharedPreferenceChangeListener(AppTheme.onThemeSettingChanged);
