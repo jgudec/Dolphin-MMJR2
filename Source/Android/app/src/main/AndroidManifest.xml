@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="org.dolphinemu.mmjr">
+    package="org.dolphinemu.mmjr2.md3">
 
     <uses-feature
         android:name="android.hardware.touchscreen"
