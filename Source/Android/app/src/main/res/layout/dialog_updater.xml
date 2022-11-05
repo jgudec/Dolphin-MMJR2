@@ -208,7 +208,7 @@
                     android:stateListAnimator="@null"
                     android:text="@string/button_download"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:textColor="@color/m3_primary_color"/>
+                    />
 
                 <ProgressBar
                     android:id="@+id/progressbar_download"

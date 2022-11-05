@@ -129,6 +129,7 @@ public final class UpdaterDialog extends DialogFragment implements LoadCallback<
     versionText.setText(getString(R.string.version_description, mData.version.toString()));
     downloadSize.setText(getString(R.string.download_size, mData.size));
     changelogButton.setOnClickListener(this::onChangelogClick);
+    downloadProgressBar.setVisibility(View.GONE);
 
     int result = mBuildVersion.compareTo(mData.version);
     if (result >= 0)
@@ -136,7 +137,7 @@ public final class UpdaterDialog extends DialogFragment implements LoadCallback<
       updaterMessage.setText(R.string.updater_uptodate);
       updaterMessage.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
       downloadButton.setEnabled(false);
-      downloadProgressBar.setVisibility(View.GONE);
+
     }
     else
     {
